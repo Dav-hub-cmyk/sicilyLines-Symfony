@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+
+{# Dans la vue twig : form_to_connect.html.twig #}
+
+{% block stylesheet %}
+     {% form_theme form 'bootstrap_4_horiizontal_layout.html.twig' %}
+{% endblock %}
+
+   
+{% block body %}
+
+            {{ form_start(form) }}
+                {{ form_label(form.nom) }}
+                {{ form_widget(form.nom) }}
+
+                {{ form_label(form.adresse) }}
+                {{ form_widget(form.adresse) }}
+
+                {{ form_label(form.code_postal) }}
+                {{ form_widget(form.code_postal) }}
+
+                {{ form_label(form.ville) }}
+                {{ form_widget(form.ville) }}
+
+                {{ form_label(form.password) }}
+                {{ form_widget(form.password) }}
+
+                {{ form_rest(form) }}
+                <br>
+                <a class="btn btn-primary btn-lg" href="{{ path('connexion') }}" role="button">Valider</a>
+            {{ form_end(form) }}
+
+{% endblock %}

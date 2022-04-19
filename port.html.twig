@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Port{% endblock %}
+
+{% block body %}
+    {% for port in port %}
+        {{ port.nom}}
+    {% endfor %}
+{% endblock %}

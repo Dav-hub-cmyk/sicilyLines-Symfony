@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+
+{# Dans la vue twig : form_to_connect.html.twig #}
+
+{% block stylesheet %}
+     {% form_theme form 'bootstrap_4_horiizontal_layout.html.twig' %}
+{% endblock %}
+
+   
+{% block body %}
+         <div id="formCo">
+            {{ form_start(form) }}
+
+                {{ form_label(form.adresse) }}
+                {{ form_widget(form.adresse) }}
+
+                
+
+                {{ form_label(form.password) }}
+                {{ form_widget(form.password) }}
+
+                {{ form_rest(form) }}
+                <br>
+                <a class="btn btn-primary btn-lg" href="{{ path('accueil_client') }}" role="button">Valider</a>
+            {{ form_end(form) }}
+        </div>
+
+{% endblock %}

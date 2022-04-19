@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<h1 class="text-center"> Toutes les reservations </h1>
+<br><br>
+<div class="container">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Port départ</th>
+      <th scope="col">Port arrivé</th>
+      <th scope="col">date</th>
+      <th scope="col">Durée</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+        <td>{% for port in port %}
+              {{ port.nom}}
+               {% endfor %}
+        </td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td><a class="btn btn-primary" href="#" role="button">reserver</a></td>
+    </tr>
+ 
+    <tr>
+      <td>Mark</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>@mdo</td>
+      <td><a class="btn btn-primary" href="#" role="button">reserver</a></td>
+    </tr>
+    <tr>
+      <td>Mark</td>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+      <td>@mdo</td>
+      <td><a class="btn btn-primary" href="#" role="button">reserver</a></td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+{% endblock %}
